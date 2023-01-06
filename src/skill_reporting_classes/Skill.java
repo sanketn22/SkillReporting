@@ -38,11 +38,11 @@ public class Skill {
 		this.domain = domain;
 	}
 
-	public Integer getExperience() {
+	public Float getExperience() {
 		return experience;
 	}
 
-	public void setExperience(Integer experience) {
+	public void setExperience(Float experience) {
 		this.experience = experience;
 	}
 

@@ -23,15 +23,8 @@ public class Driver_App {
 		db.insert_in_Domain("java", "tech", "9101");
 		db.update_Domain_Table("9678", "public speaking", "leadership");
 		db.delete("9101");
-		
-		
-		System.out.println("Welcome to Skill Reporting System");
-		System.out.println("Please Select an appropriate option");
-		
-		System.out.println("1. Add Details for a user");		
-		System.out.println("2. Update details for a user");
-		System.out.println("3. Remove details for a user");
-		
+
+		new Panel();		
 		
 		
 		

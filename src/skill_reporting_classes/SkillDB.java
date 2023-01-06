@@ -13,7 +13,7 @@ public class SkillDB {
 	}
 
 	public void create_database(String name,String USER,String PASS) {
-		String DB_URL="jdbc:sqlite:C:\\Users\\sandh\\OneDrive\\Desktop\\Mca_opp_practical\\"+name+".db";
+		String DB_URL="jdbc:sqlite:D:\\Java workspace\\skill_reporting_test"+name+".db";
 		//open a connection
 		try(
 			Connection conn = DriverManager.getConnection(DB_URL,USER,PASS);
@@ -31,7 +31,7 @@ public class SkillDB {
 	public static Connection connect() {
 		Connection con = null;
 		 try {
-			 String url = "jdbc:sqlite:C:\\\\Users\\\\sandh\\\\OneDrive\\\\Desktop\\\\Mca_opp_practical\\skills.db";
+			 String url = "jdbc:sqlite:D:\\Java workspace\\skill_reporting_test\\skills.db";
 			 con = DriverManager.getConnection(url);
 
 		 }
