@@ -7,7 +7,6 @@ public class Skill {
 	Level level_of_expertise;
 	
 	public Skill(String Name,Domain domain, Level level_of_expertise, Integer experience) {
-		super();
 		this.name = Name;
 		this.domain = domain;
 		this.level_of_expertise = level_of_expertise;
