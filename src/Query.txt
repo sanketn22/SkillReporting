@@ -4,7 +4,7 @@
                 + " );";
 
 
-CREATE TABLE "Domain" (
+CREATE TABLE IF NOT EXISTS Domain (
 	"Skill ID"	INTEGER NOT NULL UNIQUE,
 	"Skill"	TEXT NOT NULL UNIQUE,
 	"Domain"	TEXT NOT NULL,

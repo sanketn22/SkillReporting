@@ -2,6 +2,7 @@ package skill_reporting_classes;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -14,7 +15,7 @@ public class SkillDB {
 	
 	
 	public void create_database(String name,String USER,String PASS) {
-		String DB_URL="jdbc:sqlite:D:\\Java workspace\\skill_reporting\\src\\"+name+".db";
+		String DB_URL="jdbc:sqlite:C:\\Users\\sandh\\OneDrive\\Desktop\\Mca_opp_practical\\"+name+".db";
 		//open a connection
 		try(	
 			Connection conn = DriverManager.getConnection(DB_URL,USER,PASS);
@@ -32,7 +33,7 @@ public class SkillDB {
 	public static Connection connect() {
 		Connection con = null;
 		 try {
-			 String url = "jdbc:sqlite:C:\\Users\\Sanket_2022\\Documents\\Eclipse wkspce\\Sources\\laptopsdb.sqlite";
+			 String url = "jdbc:sqlite:C:\\\\Users\\\\sandh\\\\OneDrive\\\\Desktop\\\\Mca_opp_practical\\skills.db";
 			 con = DriverManager.getConnection(url);
 			 			 
 		 }
@@ -63,6 +64,27 @@ public void createTable(String s1) {
             System.out.println(e.getMessage());  
         }
     }
+
+
+public void insert_in_skills(String skill,String Domain,String skillId) {
+	String sql ="INSERT INTO Domain(Skill_ID,Skill,Domain) VALUES(?,?,?)";
+	try {
+		Connection conn =this.connect();
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1,skillId);
+		pstmt.setString(2,skill);
+		pstmt.setString(3,Domain);
+		pstmt.executeUpdate();
+		System.out.println("insertion sucessful");
+	}
+	catch(SQLException e) {
+		System.out.println(e.getMessage());
+	}
+}
+
+
+
+
 	
 	
 
