@@ -61,7 +61,7 @@ public void createTable(String s1) {
             stmt.execute(sql);  
         } catch (SQLException e) {  
             System.out.println(e.getMessage());  
-        }  
+        }
     }
 	
 	
