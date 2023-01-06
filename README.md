@@ -4,4 +4,7 @@ Program enables user to add their skills to a database along with their skill le
 Skills can belong to different domains.  
 The driver_app will contain the main class that will be used to carry out all the functions like adding, deleting, updating the entries in the database.  
 The Domain1 and Level Enums contain the entries for Domain of the skill, and the level of expertise respectively.  
-The Domain class contains an EnumMap<Domain1, HashSet<Skills>>, this is to hold all skills associated with the domain\n
+The Domain class contains an EnumMap<Domain1, HashSet<Skills>>, this is to hold all skills associated with the domain.  
+The Employee class has a set of Skill objects and an Integer empID to uniquely identify each user.  
+
+Currently running the application on sqlite database, will move it to another db and host it online at a later stage. 
