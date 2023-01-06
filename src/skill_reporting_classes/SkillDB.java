@@ -3,6 +3,7 @@ package skill_reporting_classes;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class SkillDB {
 
@@ -13,7 +14,7 @@ public class SkillDB {
 	
 	
 	public void create_database(String name,String USER,String PASS) {
-		String DB_URL="jdbc:sqlite:C:\\Users\\sandh\\OneDrive\\Desktop\\opp_project\\"+name+".db";
+		String DB_URL="jdbc:sqlite:D:\\Java workspace\\skill_reporting\\src\\"+name+".db";
 		//open a connection
 		try(	
 			Connection conn = DriverManager.getConnection(DB_URL,USER,PASS);
@@ -25,10 +26,43 @@ public class SkillDB {
 			System.out.println("\ncould not create database\n");
 			e.printStackTrace();
 			
-		}
+		}	
 
 	}
+	public static Connection connect() {
+		Connection con = null;
+		 try {
+			 String url = "jdbc:sqlite:C:\\Users\\Sanket_2022\\Documents\\Eclipse wkspce\\Sources\\laptopsdb.sqlite";
+			 con = DriverManager.getConnection(url);
+			 			 
+		 }
+		 catch(SQLException e ) {
+			 System.out.println(e.getMessage());
+		 }finally {
+//			 try
+//			 {
+//				 if(con!=null) {
+//					 con.close();
+//				 }
+//			 }catch(SQLException f) {
+//				 System.out.println(f.getMessage());
+//			 }
+		 }
+		 return con;
+	}
 	
+	
+public void createTable(String s1) {
+		
+		String sql = s1;  
+		try{  
+            Connection conn = this.connect();  
+            Statement stmt = conn.createStatement();            
+            stmt.execute(sql);  
+        } catch (SQLException e) {  
+            System.out.println(e.getMessage());  
+        }  
+    }
 	
 	
 

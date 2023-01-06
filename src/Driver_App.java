@@ -22,7 +22,7 @@ public class Driver_App {
 		
 		Iterator<String> it = string1.iterator();
 		SkillDB db = new SkillDB();
-		db.create_database(skildb,"four","123");
+		db.create_database("skildb","four","123");
 		
 		
 		

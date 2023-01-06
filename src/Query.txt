@@ -1,0 +1,20 @@
+"CREATE TABLE IF NOT EXISTS Details (\n"
+				+ "	id integer PRIMARY KEY, \n"
+                + "	Name text NOT NULL\n"
+                + " );";
+
+
+CREATE TABLE "Domain" (
+	"Skill ID"	INTEGER NOT NULL UNIQUE,
+	"Skill"	TEXT NOT NULL UNIQUE,
+	"Domain"	TEXT NOT NULL,
+	PRIMARY KEY("Skill ID" AUTOINCREMENT)
+);
+
+CREATE TABLE "hasA" (
+	"UID"	INTEGER NOT NULL UNIQUE,
+	"SkillID"	INTEGER NOT NULL UNIQUE,
+	"Level of experties"	TEXT NOT NULL,
+	"Years of experience"	INTEGER NOT NULL,
+	PRIMARY KEY("UID")
+);
