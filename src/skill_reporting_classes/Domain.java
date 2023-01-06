@@ -4,23 +4,13 @@ import java.util.EnumMap;
 import java.util.HashSet;
 
 public class Domain {
+
+	EnumMap<Domain1, HashSet<Skill> > domainList;
 	
+
 	
-	EnumMap<domain, HashSet<Skill> > domainList;
-	
-	enum domain{
-	TECH,
-	BUSINESS,
-	LEADERSHIP;
-}
-	
-	public Domain(EnumMap<domain, HashSet<Skill>> domainList) {
-		super();
-		this.domainList = domainList;
+	public Domain(EnumMap<Domain1, HashSet<Skill>> domainList) {
+
 	}
 
-
-	
-	
-	
 }

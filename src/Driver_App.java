@@ -3,14 +3,7 @@ import java.util.Iterator;
 
 import skill_reporting_classes .*;
 
-public class Driver_App {
-	
-	Employee e = new Employee();	
-	
-	
-	Skill skill = new Skill("C", null, null, null);
-
-	
+public class Driver_App {	
 	
 	public Driver_App() {
 		
@@ -18,7 +11,10 @@ public class Driver_App {
 
 	public static void main(String[] args) {
 		
-	
+		Skill skill = new Skill("C", null, null, null);
+		Employee e = new Employee(null, skill);
+		
+		
 
 		SkillDB db = new SkillDB();
 		db.create_database("skills","four","123");	
@@ -28,6 +24,7 @@ public class Driver_App {
 				+ "	\"Domain\"	TEXT NOT NULL,\r\n"
 				+ "	PRIMARY KEY(\"Skill_ID\" AUTOINCREMENT)\r\n"
 				+ ");");
+		
 		db.insert_in_skills("c","tech", "1234");
 		
 		

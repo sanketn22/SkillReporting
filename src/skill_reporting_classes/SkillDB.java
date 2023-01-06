@@ -10,9 +10,7 @@ public class SkillDB {
 
 	public SkillDB() {
 		
-	}
-	
-	
+	}	
 	
 	public void create_database(String name,String USER,String PASS) {
 		String DB_URL="jdbc:sqlite:C:\\Users\\sandh\\OneDrive\\Desktop\\Mca_opp_practical\\"+name+".db";
