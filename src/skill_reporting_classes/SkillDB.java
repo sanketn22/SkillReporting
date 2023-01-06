@@ -80,10 +80,39 @@ public void insert_in_skills(String skill,String Domain,String skillId) {
 	}
 }
 
+public void insert_in_has(Integer UID,Integer skillID, Level level, Integer yox ) {
+	String sql ="INSERT INTO has(UID,SkillID,Level_of_experties,Years_of_experience) VALUES(?,?,?,?)";
+	try {
+		Connection conn =this.connect();
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1,UID.toString());
+		pstmt.setString(2,skillID.toString());
+		pstmt.setString(3,level.toString());
+		pstmt.setString(4,yox.toString());
+		
+		pstmt.executeUpdate();
+		System.out.println("insertion sucessful");
+	}
+	catch(SQLException e) {
+		System.out.println(e.getMessage());
+	}
+}
 
-
-
-	
+public void insert_in_Details(Integer UID,String name ) {
+	String sql ="INSERT INTO Details(UID,Name) VALUES(?,?)";
+	try {
+		Connection conn =this.connect();
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1,UID.toString());
+		pstmt.setString(2,name);
+		
+		pstmt.executeUpdate();
+		System.out.println("insertion sucessful");
+	}
+	catch(SQLException e) {
+		System.out.println(e.getMessage());
+	}
+}
 	
 
 }

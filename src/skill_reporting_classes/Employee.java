@@ -5,13 +5,15 @@ import java.util.Set;
 public class Employee {
 	
 	private Set<Skill>skillList;
+	private String name;
 	private Integer empID;
 
 	
 	
-	public Employee(Integer x, Skill skill) {
+	public Employee(Integer x, Skill skill, String name) {
 		this.empID = x;
-		this.skillList.add(skill);		
+		this.skillList.add(skill);
+		this.name = name;
 	}
 
 

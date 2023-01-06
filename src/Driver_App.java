@@ -12,7 +12,7 @@ public class Driver_App {
 	public static void main(String[] args) {
 		
 		Skill skill = new Skill("C", null, null, null);
-		Employee e = new Employee(null, skill);
+		Employee e = new Employee(null, skill, "ABC");
 		
 		
 

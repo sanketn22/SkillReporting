@@ -1,5 +1,5 @@
 "CREATE TABLE IF NOT EXISTS Details (\n"
-				+ "	id integer PRIMARY KEY, \n"
+				+ "	UID integer PRIMARY KEY, \n"
                 + "	Name text NOT NULL\n"
                 + " );";
 
@@ -11,10 +11,10 @@ CREATE TABLE IF NOT EXISTS Domain (
 	PRIMARY KEY("Skill ID" AUTOINCREMENT)
 );
 
-CREATE TABLE IF NOT EXISTS hasA (
+CREATE TABLE IF NOT EXISTS has (
 	"UID"	INTEGER NOT NULL UNIQUE,
 	"SkillID"	INTEGER NOT NULL UNIQUE,
-	"Level of experties"	TEXT NOT NULL,
-	"Years of experience"	INTEGER NOT NULL,
+	"Level_of_experties"	TEXT NOT NULL,
+	"Years_of_experience"	INTEGER NOT NULL,
 	PRIMARY KEY("UID")
 );
