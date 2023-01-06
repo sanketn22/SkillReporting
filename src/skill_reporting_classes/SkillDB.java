@@ -64,7 +64,7 @@ public void createTable(String s1) {
     }
 
 
-public void insert_in_skills(String skill,String Domain,String skillId) {
+public void insert_in_Domain(String skill,String Domain,String skillId) {
 	String sql ="INSERT INTO Domain(Skill_ID,Skill,Domain) VALUES(?,?,?)";
 	try {
 		Connection conn =this.connect();
@@ -78,6 +78,45 @@ public void insert_in_skills(String skill,String Domain,String skillId) {
 	catch(SQLException e) {
 		System.out.println(e.getMessage());
 	}
+}
+
+
+
+public void update_Domain_Table(String skillid, String skillname, String Domain) {
+    String sql = "UPDATE Domain SET Domain = ? , "
+            + "Skill = ? "
+            + "WHERE Skill_ID = ?";
+
+    try (Connection conn = this.connect();
+            PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+        // set the corresponding param
+        pstmt.setString(1, Domain);
+        pstmt.setString(2, skillname);
+        pstmt.setString(3, skillid);
+        // update 
+        pstmt.executeUpdate();
+    } catch (SQLException e) {
+        System.out.println(e.getMessage());
+    }
+}
+
+
+
+public void delete(String id) {
+    String sql = "DELETE FROM Domain WHERE Skill_ID = ?";
+
+    try (Connection conn = this.connect();
+            PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+        // set the corresponding param
+        pstmt.setString(1, id);
+        // execute the delete statement
+        pstmt.executeUpdate();
+
+    } catch (SQLException e) {
+        System.out.println(e.getMessage());
+    }
 }
 
 

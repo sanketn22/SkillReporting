@@ -35,14 +35,6 @@ public class Employee {
 	}
 
 
-	public Integer getSalary() {
-		return salary;
-	}
-
-
-	public void setSalary(Integer salary) {
-		this.salary = salary;
-	}
 	
 	
 		
