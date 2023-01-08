@@ -18,14 +18,11 @@ public class Driver_App {
 				+ "	PRIMARY KEY(\"Skill_ID\" AUTOINCREMENT)\r\n"
 				+ ");");
 		
-		db.insert_in_Domain("c","tech", "1234");
-		db.insert_in_Domain("python","tech", "5678");
-		db.insert_in_Domain("java", "tech", "9101");
-		db.update_Domain_Table("9678", "public speaking", "leadership");
-		db.delete("9101");
+//		db.insert_in_Domain("React.js","tech", "8643");
+//		db.delete("12343");
 
-		new Panel();		
-		
+		new Panel();
+;		
 		
 		
 	}
