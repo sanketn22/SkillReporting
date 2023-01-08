@@ -18,8 +18,11 @@ public class Driver_App {
 				+ "	PRIMARY KEY(\"Skill_ID\" AUTOINCREMENT)\r\n"
 				+ ");");
 		
-//		db.insert_in_Domain("React.js","tech", "8643");
-//		db.delete("12343");
+		db.createTable("CREATE TABLE IF NOT EXISTS Details (\n"
+				+ "	UID integer PRIMARY KEY, \n"
+                + "	Name text NOT NULL\n"
+                + " );");
+		
 
 		new Panel();
 ;		

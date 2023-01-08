@@ -1,7 +1,7 @@
 "CREATE TABLE IF NOT EXISTS Details (\n"
 				+ "	UID integer PRIMARY KEY, \n"
                 + "	Name text NOT NULL\n"
-                + " );";
+                + " );"
 
 
 CREATE TABLE IF NOT EXISTS Domain (
