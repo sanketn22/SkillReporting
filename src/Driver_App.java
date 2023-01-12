@@ -25,7 +25,6 @@ public class Driver_App {
 		
 
 		new Panel();
-;		
 		
 		
 	}
